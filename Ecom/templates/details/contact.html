@@ -1,0 +1,236 @@
+{% extends 'partials/baseall.html' %}
+{% load static %}
+{% block contentall %}
+    <!-- Menu Sidebar Section Start -->
+    <div class="menu-sidebar-area ">
+        <div class="menu-sidebar-wrapper">
+            <div class="menu-sidebar-close">
+                <button class="menu-sidebar-close-btn" id="menu_sidebar_close_btn">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+            <div class="menu-sidebar-content">
+                <div class="menu-sidebar-logo">
+                    <a href="index-2.html" class="standard-logo">
+                        <img src="images/logo/footer_logo.png" alt="logo" />
+                    </a>
+                </div>
+                <div class="mobile-nav-menu fix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu Sidebar Section End -->
+
+    <!-- Menu Sidebar Overlay -->
+    {% comment %} <div class="body-overlay"></div>
+    <!-- Page Header Area Start !-->
+    <div class="page-header-area style-1">
+        <div class="custom-container">
+            <div class=" page-breadcrumb-sec">
+                <div class="breadcrumb-shape"></div>
+                <div class="page-overlay"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb-wrapper">
+                            <div class="breadcrumb-list">
+                                <ul>
+                                    <li><a href="index-2.html">Home</a></li>
+                                    <li class="active">
+                                        <a href="#">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="page-heading">
+                                <h1>We are friendly team about consulting</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header Area End !--> {% endcomment %}
+
+    <!--contact info section  -->
+    <div class="contact-page-contact-info">
+        <div class="container mt-5">
+            <div class="contact-info-card-wrapper">
+                <div class="image-wrapper">
+                    <div class="project-info-sketch" style="background-image: url(images/shape/image-card-sketch.png)"></div>
+                    <img class="tilt-animate" src="{% static 'images/common/contact-info.jpg' %}" alt="choose-us" />
+                </div>
+                <div class="info-section">
+                    <div class="section-title">
+                        <h2 class="title text-start"> <span class="under-line style-two"> Get In Touch </span></h2>
+                    </div>
+                    <div class="contact-list-wrapper">
+                        <div class="icon-card style-five">
+                            <div class="icon">
+                                <i class="icon-phone-3"></i>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Call Today. It’s Free</h5>
+                                <p class="desc">+ (123) 456 7890 <br> + (000) 123 4567</p>
+                            </div>
+                        </div>
+                        <div class="icon-card style-five">
+                            <div class="icon">
+                                <i class="icon-envelope"></i>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Have Any Question?</h5>
+                                <p class="desc">support@website.com <br>sales@website.com</p>
+                            </div>
+                        </div>
+                        <div class="icon-card style-five mb-0">
+                            <div class="icon">
+                                <i class="icon-location-dot-5"></i>
+                            </div>
+                            <div class="content">
+                                <h5 class="title">Visit Anytime</h5>
+                                <p class="desc">Evergreen 27San New York, RA85600 <br> New Avenue Road 51.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+    <!-- Contact-form style-two contact-page start -->
+    <div class="contact-form-area">
+        <div class="sketch" style=" background-image: url({% static 'images/sketch-color.png' %})"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h2 class="title text-start">
+                            <span class="under-line style-two"> Contact us.</span> It’s <br> Easy
+                        </h2>
+                        <p class="text-start">Lorem ipsum dolor sit amet, consectetur adipiscing erat posuere nec mauris faucibus urna sagittis. Lorem ipsum dolor sit
+                        amet consectetur adipiscing elit erat posuere nec mauris faucibus urna sagittis.</p>
+                        <div class="mt-48">
+                            <a href="{% url 'faq' %}" class="theme-btn style-three"> <span> Visit FAQ </span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="comment-respond style-two mt-48 mt-lg-0">
+                        <form action="" id="con" class="comment-form" method="POST">
+                            {% csrf_token %}
+                            <div class="row gx-3">
+                                <div class="col-md-6">
+                                    <div class="single-input-field">
+                                        <label>Full Name</label>
+                                        <input name="name" id="name" type="text" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-input-field">
+                                        <label>Email</label>
+                                        <input name="email" id="email" type="email" placeholder="Email address" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-input-field">
+                                        <label>Phone Number</label>
+                                        <input name="number" type="number" placeholder="Phone number" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="single-input-field style-two">
+                                        <label >Service</label>
+                                        <select name="choice" >
+                                            <option selected>Select service</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="single-input-field style-two">
+                                        <label>Message</label>
+                                        <textarea class="style-two" name="message" id="message" placeholder="Message" rows="4" cols="50" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="theme-btn" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact-form style-two contact-page end -->
+    <!-- Add jQuery library if not already included -->
+{% comment %} <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include jQuery Validation plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script> {% endcomment %}
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+   <script>
+        // Attach event listener to the form submission
+        var form = document.getElementById("con");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+    
+            // Simulate form submission success (replace with your actual form submission logic)
+            setTimeout(function () {
+                // Display SweetAlert thank you popup
+                Swal.fire({
+                    title: 'Thank You!',
+                    text: 'Your message has been sent successfully.',
+                    icon: 'success',
+                    showCancelButton: false,
+                    confirmButtonColor: '#3085d6',
+                    confirmButtonText: 'OK'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        form.submit(); // Submit the form if the user clicks OK in SweetAlert
+                    }
+                });
+            },); // Display the SweetAlert popup after 1 second
+        });
+    </script> 
+
+
+     <!-- Include jQuery library -->
+<!-- Include jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include jQuery Validation plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Initialize form validation on the #con form
+        $("#con").validate({
+            rules: {
+                name: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                // Add similar rules for other fields
+            },
+            messages: {
+                name: "Please enter your name",
+                email: {
+                    required: "Please enter your email address",
+                    email: "Please enter a valid email address"
+                },
+                // Add similar messages for other fields
+            },
+            submitHandler: function (form) {
+                // Form is valid; you can submit it here if needed
+            }
+        });
+    });
+</script>
+
+{% endblock  %}

@@ -1,0 +1,297 @@
+{% extends 'partials/baseall.html' %}
+{% load static %}
+{% block contentall %}
+<!-- Menu Sidebar Section Start -->
+    <div class="menu-sidebar-area ">
+        <div class="menu-sidebar-wrapper">
+            <div class="menu-sidebar-close">
+                <button class="menu-sidebar-close-btn" id="menu_sidebar_close_btn">
+                    <i class="fal fa-times"></i>
+                </button>
+            </div>
+            <div class="menu-sidebar-content">
+                <div class="menu-sidebar-logo">
+                    <a href="{% url 'index2' %}" class="standard-logo">
+                        <img src="{% static 'images/logo/footer_logo.png' %}" alt="logo" />
+                    </a>
+                </div>
+                <div class="mobile-nav-menu fix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu Sidebar Section Start -->
+
+    <!-- Menu Sidebar Section Start -->
+    <div class="body-overlay"></div>
+{% comment %} 
+    <!-- Page Header Area Start !-->
+    <div class="page-header-area style-1">
+        <div class="custom-container">
+            <div class=" page-breadcrumb-sec" style="background-image: url({% static 'images/breadcrumb/about.jpg' %})">
+                <div class="breadcrumb-shape"></div>
+                <div class="page-overlay"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="breadcrumb-wrapper">
+                            <div class="breadcrumb-list">
+                                <ul>
+                                    <li><a href="{% url 'index2' %}">Home</a></li>
+                                    <li class="active">
+                                        <a href="#">Blog & News</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="page-heading">
+                                <h1>Everyday blogs & <br/> resources</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header Area End !--> {% endcomment %}
+
+    <!-- blog single Start -->
+    <div class="blog-main-wrapper">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-7 position-relative p-0">
+                    <div class="blogs-wrapper">
+                        <div class="blog-sketch" style="background-image: url({% static 'images/shape/sketch-color.svg' %})"></div>
+                        
+                        
+                        {% for post in posts %}
+                        <article class="single-post-item format-image">
+                            <div class="post-thumbnail">
+                                <a href="{% url 'blog_details' %}">
+                                    <img src="{{ post.image.url }}" alt="Blog Image" />
+                                </a>
+                            </div>
+                            <div class="post-content-wrapper">
+                                <div class="post-meta">
+                                    <span class="post-type">{{ post.name }}</span>
+                                    <span><i class="icon-user-2"></i>John smith</span>
+                                    <span><i class="icon-comments-2"></i>No Comments</span>
+                                    <span><a href="#"><i class="icon-calendar-minus-2"></i>Jan 17, 2023</a></span>
+                                </div>
+                                <h4 class="post-title">
+                                    <a href="{% url 'blog_details' %}">{{ post.title }}</a>
+                                </h4>
+                                <div class="read-more">
+                                    <a href="{% url 'blog_details' %}" tabindex="-1">Read More
+                                    </a>
+                                </div>
+                            </div>
+                        
+                        </article>
+
+                    {% endfor %}
+
+                        
+                        {% comment %} <article class="single-post-item format-image">
+                            <div class="post-thumbnail">
+                                <a href="blog-details.html">
+                                    <img src="{% static 'images/blog/blog-2.jpg' %}" alt="Blog Image" />
+                                </a>
+                            </div>
+                            <div class="post-content-wrapper">
+                                <div class="post-meta">
+                                    <span class="post-type">Daily Habits</span>
+                                    <span><i class="icon-user-2"></i>John Smith</span>
+                                    <span><i class="icon-comments-2"></i>No Comments</span>
+                                    <span><a href="#"><i class="icon-calendar-minus-2"></i>Jan 17, 2023</a></span>
+                                </div>
+                                <h4 class="post-title">
+                                    <a href="blog-details.html">If you have the self-discipline, start 4 habits
+                                        today</a>
+                                </h4>
+                                <div class="read-more">
+                                    <a href="blog-details.html" tabindex="-1">Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="single-post-item format-image">
+                            <div class="post-thumbnail">
+                                <a href="blog-details.html">
+                                    <img src="{% static 'images/blog/blog-3.jpg' %}" alt="Blog Image" />
+                                </a>
+                            </div>
+                            <div class="post-content-wrapper">
+                                <div class="post-meta">
+                                    <span class="post-type">Marketing</span>
+                                    <span><i class="icon-user-2"></i>John Smith</span>
+                                    <span><i class="icon-comments-2"></i>No Comments</span>
+                                    <span><a href="#"><i class="icon-calendar-minus-2"></i>Jan 17, 2023</a></span>
+                                </div>
+                                <h4 class="post-title">
+                                    <a href="{% url 'blog_details' %}">Marketing tools you should be paying attention in
+                                        2023</a>
+                                </h4>
+                                <div class="read-more">
+                                    <a href="{% url 'blog_details' %}" tabindex="-1">Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="single-post-item format-image">
+                            <div class="post-thumbnail">
+                                <a href="blog-details.html">
+                                    <img src="{% static 'images/blog/blog-4.jpg' %}" alt="Blog Image" />
+                                </a>
+                            </div>
+                            <div class="post-content-wrapper">
+                                <div class="post-meta">
+                                    <span class="post-type">Career</span>
+                                    <span><i class="icon-user-2"></i>John Smith</span>
+                                    <span><i class="icon-comments-2"></i>No Comments</span>
+                                    <span><a href="#"><i class="icon-calendar-minus-2"></i>Jan 17, 2023</a></span>
+                                </div>
+                                <h4 class="post-title">
+                                    <a href="{% url 'blog_details' %}">How to hire a right business executive for your
+                                        company</a>
+                                </h4>
+                                <div class="read-more">
+                                    <a href="{% url 'blog_details' %}" tabindex="-1">Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </article> {% endcomment %}
+
+
+
+                        {% comment %} <div class="basic-pagination basic-pagination-2 mb-40">
+                            <ul>
+                                <li>
+                                    <span aria-current="page" class="page-numbers">1</span>
+                                </li>
+                                <li><a class="page-numbers" href="#">2</a></li>
+                                <li><a class="page-numbers" href="#">3</a></li>
+                                <li><span class="page-numbers dots">…</span></li>
+                                <li><a class="page-numbers" href="#">5</a></li>
+                                <li>
+                                    <a class="next page-numbers" href="#"><i class="fa fa-arrow-right"></i></a>
+                                </li>
+                            </ul>
+                        </div> {% endcomment %}
+
+                        {% include 'blog/paginations.html' %}
+
+                    </div>
+                </div>
+                <div class="col-lg-5 pl-lg-0">
+                    <div class="sidebar">
+                        {% comment %} <div class="widget widget_search">
+                            <form class="search-form" action="#" method="get">
+                                <input type="text" placeholder="Type and Search" />
+                                <button type="submit"><i class="icon-magnifying-glass-2"></i></button>
+                            </form>
+                        </div> {% endcomment %}
+
+                        {% include 'blog/search.html' %}
+
+                        <div class="widget widget_latest_post">
+                            <div class="widget-title-box">
+                                <h4 class="wp-block-heading">Recent Posts</h4>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="latest-post-thumb">
+                                        <img src="{% static 'images/blog/recent/image-1.jpg' %}" alt="" />
+                                    </div>
+                                    <div class="latest-post-desc">
+                                        <span class="latest-post-type">Marketing</span>
+                                        <h3 class="latest-post-title">
+                                            <a href="#">Marketing tools you should be paying attention in 2030</a>
+                                        </h3>
+                                        <p class="latest-post-meta">6 min read</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="latest-post-thumb">
+                                        <img src="{% static 'images/blog/recent/image-2.jpg' %}" alt="" />
+                                    </div>
+                                    <div class="latest-post-desc">
+                                        <span class="latest-post-type">Habits</span>
+                                        <h3 class="latest-post-title">
+                                            <a href="#">If You Have The Self-Discipline, Start 4 Habits Today</a>
+                                        </h3>
+                                        <p class="latest-post-meta">6 min read</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="latest-post-thumb">
+                                        <img src="{% static 'images/blog/recent/image-3.jpg' %}" alt="" />
+                                    </div>
+                                    <div class="latest-post-desc">
+                                        <span class="latest-post-type">Marketing</span>
+                                        <h3 class="latest-post-title">
+                                            <a href="#">7 Marketing tools you should be paying attention</a>
+                                        </h3>
+                                        <p class="latest-post-meta">6 min read</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget widget_categories">
+                            <div class="widget-title-box">
+                                <h4 class="wp-block-heading">Categories</h4>
+                            </div>
+                            <ul>
+                                <li><a href="#">Marketing Strategy (5)
+                                        <span> <i class="icon-angle-right-7"></i></span>
+                                    </a>
+                                </li>
+                                <li><a href="#">Business Strategy (3)
+                                        <span> <i class="icon-angle-right-7"></i></span>
+                                    </a>
+                                </li>
+                                <li><a href="#">Human Resources (8)
+                                        <span> <i class="icon-angle-right-7"></i></span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+
+                        <div class="widget widget_tag_cloud">
+                            <div class="widget-title-box">
+                                <h4 class="wp-block-heading">Tags</h4>
+                            </div>
+                            <div class="tagcloud">
+                                <a href="#">Marketing</a>
+                                <a href="#">Strategy</a>
+                                <a href="#">Business</a>
+                                <a href="#">Consulting</a>
+                                <a href="#">It Solution</a>
+                                <a href="#">Human Resources</a>
+                                <a href="#">Consulting</a>
+                                <a href="#">Marketing</a>
+                                <a href="#">Digital marketing</a>
+                                <a href="#">Finance</a>
+                            </div>
+                        </div> 
+
+                        {% comment %} {% include 'blog/tags.html' %} {% endcomment %}
+
+                        <div class="widget widget_social_profile">
+                            <div class="widget-title-box">
+                                <h4 class="wp-block-heading">Follow Us</h4>
+                            </div>
+                            <div class="social-widget">
+                                <a class="facebook" href="#"><i class="icon-facebook"></i></a>
+                                <a class="twitter" href="#"><i class="icon-twitter"></i></a>
+                                <a class="linkedin" href="#"><i class="icon-linkedin"></i></a>
+                                <a class="instagram" href="#"><i class="icon-youtube"></i></a>
+                                <a class="instagram" href="#"><i class="icon-instagram-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- blog single end -->
+    {% endblock  %}
